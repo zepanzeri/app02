@@ -17,24 +17,65 @@ class MainView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
-        backgroundColor: Colors.blue[100],
+        title: Text('Home', style: TextStyle(color: Colors.black)),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.amber,
         actions: [
-          Icon(Icons.home),
+          Icon(Icons.home, color: Colors.black),
         ],
       ),
       body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.black,
-          child: FractionallySizedBox(
-            alignment: Alignment.topLeft,
-            widthFactor: 0.5,
-            heightFactor: 0.33,
-            child: Container(
-              color: Colors.red,
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              child: Row(
+                children: [
+                  Text('Top Left'),
+                  Spacer(),
+                  Text('Top Right'),
+                ],
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2,
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                ),
+              ),
             ),
-          )),
+            Container(
+              height: 200,
+              child: Text('Middle'),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2,
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                ),
+              ),
+            ),
+            Container(
+              height: 100,
+              child: Row(
+                children: [
+                  Text('Bottom Left'),
+                  Spacer(),
+                  Text('Bottom Right'),
+                ],
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2,
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
