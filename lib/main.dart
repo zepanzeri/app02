@@ -19,7 +19,6 @@ class MainView extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home', style: TextStyle(color: Colors.black)),
         backgroundColor: Colors.white,
-        foregroundColor: Colors.amber,
         actions: [
           Icon(Icons.home, color: Colors.black),
         ],
@@ -31,9 +30,28 @@ class MainView extends StatelessWidget {
               height: 100,
               child: Row(
                 children: [
-                  Text('Top Left'),
-                  Spacer(),
-                  Text('Top Right'),
+                  Container(
+                    height: 100,
+                    width: 200,
+                    child: Text('A'),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                      width: 2,
+                      color: Colors.black,
+                      style: BorderStyle.solid,
+                    )),
+                  ),
+                  Container(
+                    height: 100,
+                    width: 200,
+                    child: Text('B'),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                      width: 2,
+                      color: Colors.black,
+                      style: BorderStyle.solid,
+                    )),
+                  ),
                 ],
               ),
               decoration: BoxDecoration(
@@ -46,23 +64,48 @@ class MainView extends StatelessWidget {
             ),
             Container(
               height: 200,
-              child: Text('Middle'),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2,
-                  color: Colors.black,
-                  style: BorderStyle.solid,
-                ),
+              child: Row(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 400,
+                    child: Text('C'),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                      width: 2,
+                      color: Colors.black,
+                      style: BorderStyle.solid,
+                    )),
+                  ),
+                ],
               ),
             ),
             Container(
               height: 100,
               child: Row(
                 children: [
-                  Text('Bottom Left'),
-                  Spacer(),
-                  Text('Bottom Right'),
+                  Container(
+                    height: 100,
+                    width: 200,
+                    child: Text('D'),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                      width: 2,
+                      color: Colors.black,
+                      style: BorderStyle.solid,
+                    )),
+                  ),
+                  Container(
+                    height: 100,
+                    width: 200,
+                    child: Text('E'),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                      width: 2,
+                      color: Colors.black,
+                      style: BorderStyle.solid,
+                    )),
+                  ),
                 ],
               ),
               decoration: BoxDecoration(
@@ -75,6 +118,7 @@ class MainView extends StatelessWidget {
             ),
           ],
         ),
+        width: 400,
       ),
     );
   }
