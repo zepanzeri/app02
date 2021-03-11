@@ -23,102 +23,80 @@ class MainView extends StatelessWidget {
           Icon(Icons.home, color: Colors.black),
         ],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              height: 100,
-              child: Row(
-                children: [
-                  Container(
-                    height: 100,
-                    width: 200,
-                    child: Text('A'),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 2,
-                      color: Colors.black,
-                      style: BorderStyle.solid,
-                    )),
+      body: Center(
+        child: Column(children: [
+          Row(children: [
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Text('A', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.black,
+                    style: BorderStyle.solid,
                   ),
-                  Container(
-                    height: 100,
-                    width: 200,
-                    child: Text('B'),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 2,
-                      color: Colors.black,
-                      style: BorderStyle.solid,
-                    )),
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2,
-                  color: Colors.black,
-                  style: BorderStyle.solid,
                 ),
               ),
             ),
-            Container(
-              height: 200,
-              child: Row(
-                children: [
-                  Container(
-                    height: 200,
-                    width: 400,
-                    child: Text('C'),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 2,
-                      color: Colors.black,
-                      style: BorderStyle.solid,
-                    )),
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Text('B', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.black,
+                    style: BorderStyle.solid,
                   ),
-                ],
-              ),
-            ),
-            Container(
-              height: 100,
-              child: Row(
-                children: [
-                  Container(
-                    height: 100,
-                    width: 200,
-                    child: Text('D'),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 2,
-                      color: Colors.black,
-                      style: BorderStyle.solid,
-                    )),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 200,
-                    child: Text('E'),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 2,
-                      color: Colors.black,
-                      style: BorderStyle.solid,
-                    )),
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2,
-                  color: Colors.black,
-                  style: BorderStyle.solid,
                 ),
               ),
             ),
-          ],
-        ),
-        width: 400,
+          ]),
+          Row(children: [
+            Expanded(
+              child: Container(
+                height: 200,
+                child: Text('C', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                  ),
+                ),
+              ),
+            ),
+          ]),
+          Row(children: [
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Text('D', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Text('E', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                  ),
+                ),
+              ),
+            ),
+          ])
+        ]),
       ),
     );
   }
